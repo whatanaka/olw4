@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Enums\RoleEnum;
 use App\Http\Controllers\Controller;
 use App\Models\Company;
 use App\Models\Seller;
@@ -49,7 +50,7 @@ class RegisteredUserController extends Controller
             ]);
 
             $user = User::create([
-                'role_id' => 2,
+                'role_id' => RoleEnum::MANAGER,
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
