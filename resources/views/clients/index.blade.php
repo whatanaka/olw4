@@ -17,13 +17,13 @@
                         ['label' => 'Email','column' => 'user.email'],
                         ['label' => 'City', 'column' => 'address.city'],
                         ['label' => 'State', 'column' => 'address.state'],
-                    ]
-                    "
+                    ]"
+                    :eager-loading="['user','address']"
                         edit="clients.edit"
                         delete="clients.destroy"
                     ></livewire:table>
                 </div>
 
+            </div>
         </div>
-    </div>
 </x-app-layout>
